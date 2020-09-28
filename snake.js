@@ -1,13 +1,14 @@
-function create__table(columns__in__table, rows__in__table) { 
-    document.write('<table border=1>');
-    for (let i = 0; i < rows__in__table; i++) {
-        document.write('<tr>');
-        for (let j = 0; j < columns__in__table; j++) {
-            document.write('<td></td>');
-        }
-        document.write('</tr>');
+let s_table = document.querySelector('#s_table');
+function create__table(parent, columns, rows) { 
+    let table = document.createElement('table');
+    for (let i = 0; i < rows; i++) {
+        let tr = document.createElement('tr');
+        for (let j = 0; j < columns; j++) {
+            let td = document.createElement('td');
+            tr.appendChild(td);
+        }    
+    table.appendChild(tr);
     }
-    document.write('</table>');
+parent.appendChild(table);      
 }
-
-create__table(10,10);
+create__table(s_table, 10,10);  
