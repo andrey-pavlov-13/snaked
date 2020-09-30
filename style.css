@@ -1,11 +1,9 @@
-table {
-    width: 200px;
-    height: 200px;
+table tr td {
+    width: 20px;
+    height: 20px;
     border-collapse: collapse;
     border: 1px;
     border-color: black;
     border-spacing: 10px;
-}
-td tr {
-    border: black;
+    border-style: solid;
 }
