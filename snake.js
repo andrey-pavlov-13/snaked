@@ -21,3 +21,9 @@ table_cleaner.onclick = function cleaner(elementID){
     document.getElementById("s_table").innerHTML = "";
 }
 
+
+let rows_value = document.getElementById("table_rows").value;
+let colomns_value = document.getElementById("table_colomns").value;
+click.onclick = function input_cheker(rows_value, colomns_value) {
+    alert(rows_value);
+}
