@@ -22,12 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
     table_cleaner.onclick = function cleaner(elementID){
         s_table.innerHTML = "";
     }
-
-    click.onclick = function (event) {
-        let rows_value = document.getElementById("table_rows").value;
-        let columns_value = document.getElementById("table_columns").value;
-        console.log(rows_value, columns_value);
-    }
     
     button_table.onclick = function() {
         s_table.innerHTML = "";
@@ -35,17 +29,16 @@ document.addEventListener('DOMContentLoaded', function () {
         let columns_value = document.getElementById("table_columns").value;
         let rows_int = parseInt(rows_value);
         let columns_int = parseInt(columns_value);
-        console.log(typeof(rows_int, columns_int));
+        console.log(typeof rows_int, typeof columns_int);
         console.log(rows_int, columns_int);
-        if (typeof(rows_int, columns_int) == Number) {
-            console.log(typeof(rows_int, columns_int));
-            console.log('ne rabotaet');
-            console.log(rows_int, columns_int);
-        } else if ((typeof(rows_int, columns_int) == NaN)){
-            console.log(typeof(rows_int, columns_int));
-            console.log('rabotaet');
-            console.log(rows_int, columns_int);
-
+        if (Number.isInteger(rows_int) && Number.isInteger(columns_int)) {
+            if (1<=rows_int && 21>rows_int && 1<=columns_int && 21>columns_int) {
+              create_table(s_table, rows_int, columns_int);  
+            } else {
+            console.log('Неверное указаны данные'); 
+            }
+        } else {
+            console.log('Неверно указанны данные');
         }
         
     }

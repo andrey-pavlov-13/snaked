@@ -7,3 +7,10 @@ table tr td {
     border-spacing: 10px;
     border-style: solid;
 }
+
+.menu {
+    display: flex;
+}
+
+
+
